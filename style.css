@@ -1,0 +1,354 @@
+
+/* CSS-переменные */
+:root {
+    --main-color: #232b96;
+    --background-color: #f4f4f4;
+    --text-color: #333333;
+    --white-color: #ffffff;
+}
+
+/* Общие стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+/* Шапка сайта */
+header {
+    background-color: var(--main-color);
+    padding: 1rem;
+}
+
+/* Меню */
+nav p {
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a,
+nav a:visited {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffdd57;
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #ff8080;
+}
+
+/* Основное содержимое */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+}
+
+/* Заголовки */
+h2 {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* Абзацы */
+main p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* Обычные ссылки */
+main a {
+    color: var(--main-color);
+}
+
+main a:visited {
+    color: #663399;
+}
+
+main a:hover {
+    color: #e67e22;
+}
+
+main a:active {
+    color: red;
+}
+
+/* Фотография */
+figure {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #00000025;
+}
+
+figcaption {
+    font-style: italic;
+    color: #666666;
+    margin-top: 0.5rem;
+}
+
+/* Интересный факт */
+aside {
+    background-color: #eef0ff;
+    border-left: 4px solid var(--main-color);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+}
+
+/* Список навыков */
+main ul {
+    list-style-type: square;
+    padding-left: 2rem;
+}
+
+main li {
+    margin-bottom: 0.5rem;
+}
+
+/* Разделительная линия */
+hr {
+    border: none;
+    border-top: 1px solid #cccccc;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 1rem;
+}
+
+
+/* Заголовки третьего уровня */
+h3 {
+    color: var(--main-color);
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* Статья */
+article {
+    margin-bottom: 2rem;
+}
+
+/* Раздел с занятиями */
+section {
+    margin-top: 2rem;
+}
+
+/* Список занятий */
+section ul {
+    list-style-type: square;
+    padding-left: 2rem;
+}
+
+section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Изображение группы */
+article figure {
+    text-align: center;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Раздел с увлечениями */
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Карточки увлечений */
+.hobbies article {
+    flex: 1 1 220px;
+    max-width: 300px;
+    padding: 1.5rem;
+    background-color: #f8f9ff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Эффект при наведении */
+.hobbies article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #00000020;
+}
+
+/* Заголовки карточек */
+.hobbies h3 {
+    color: var(--main-color);
+    margin-top: 0;
+}
+
+/* Фотографии */
+.hobbies img {
+    width: 200px;
+    max-width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Текст карточек */
+.hobbies p {
+    text-align: center;
+}
+
+
+/* Раздел с друзьями */
+.friends {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Карточки друзей */
+.friends article {
+    flex: 1 1 220px;
+    max-width: 300px;
+    padding: 1.5rem;
+    margin-bottom: 0;
+    background-color: #f8f9ff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #00000010;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Эффект при наведении */
+.friends article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px #00000025;
+}
+
+/* Имена друзей */
+.friends h3 {
+    color: var(--main-color);
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Описание друзей */
+.friends p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+/* Фотография друзей */
+main > figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.friend { 
+    width:300px;
+    height:300px;
+}
+
+
+
+/* Главный заголовок сайта */
+h1 {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Приветственный блок */
+.welcome {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Логотип */
+.welcome img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Текст приветствия */
+.welcome p {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Новости */
+.news {
+    background-color: #f8f9ff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Список новостей */
+.news ol {
+    padding-left: 2rem;
+    list-style-type: decimal;
+}
+
+.news li {
+    margin-bottom: 0.8rem;
+}
+
+/* Ссылка на ВК */
+.social-link {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.social-link a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-link a:hover {
+    text-decoration: underline;
+}
