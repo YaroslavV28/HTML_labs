@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №5 - Вариант 14</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Выбор языка программирования</h1>
+        <p class="description">
+            Выберите язык программирования из выпадающего списка.
+        </p>
+
+        <div class="select">
+            <span id="select-label" class="select__label">
+                Язык программирования
+            </span>
+
+            <button
+                id="select-button"
+                class="select__button"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-labelledby="select-label select-value"
+                aria-controls="language-list"
+            >
+                <span id="select-value">Выберите язык</span>
+                <span class="select__arrow" aria-hidden="true"></span>
+            </button>
+
+            <ul
+                id="language-list"
+                class="select__list"
+                role="listbox"
+                aria-labelledby="select-label"
+                tabindex="-1"
+                hidden
+            >
+                <li id="option-1" class="select__option"
+                    role="option" aria-selected="false">C++</li>
+                <li id="option-2" class="select__option"
+                    role="option" aria-selected="false">Python</li>
+                <li id="option-3" class="select__option"
+                    role="option" aria-selected="false">JavaScript</li>
+                <li id="option-4" class="select__option"
+                    role="option" aria-selected="false">Java</li>
+                <li id="option-5" class="select__option"
+                    role="option" aria-selected="false">C#</li>
+            </ul>
+        </div>
+
+        <p id="result" class="result" aria-live="polite">
+            Вы пока ничего не выбрали.
+        </p>
+
+        <div class="help">
+            <h2>Управление с клавиатуры</h2>
+            <p>Enter или пробел - открыть список и выбрать вариант.</p>
+            <p>Стрелки ↑ ↓ - перемещение между вариантами.</p>
+            <p>Escape - закрыть список.</p>
+        </div>
+    </main>
+
+    <script src="script1.js"></script>
+</body>
+</html>

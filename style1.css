@@ -1,0 +1,149 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #edf2ff;
+    font-family: Arial, sans-serif;
+    color: #202842;
+}
+
+.container {
+    width: 90%;
+    max-width: 520px;
+    padding: 35px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(30, 50, 90, 0.12);
+}
+
+h1 {
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.description {
+    color: #65708a;
+    line-height: 1.5;
+}
+
+.select {
+    position: relative;
+    margin-top: 25px;
+}
+
+.select__label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.select__button {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 2px solid #b7c4e0;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.select__button:hover {
+    border-color: #526de6;
+    background: #f8faff;
+}
+
+.select__button:focus-visible {
+    outline: 3px solid #ffac33;
+    outline-offset: 3px;
+}
+
+.select__button:active {
+    background: #eaf0ff;
+}
+
+.select__arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #526de6;
+    border-bottom: 2px solid #526de6;
+    transform: rotate(45deg);
+}
+
+.select__arrow::after {
+    content: "";
+    display: block;
+}
+
+.select__list {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin: 5px 0 0;
+    padding: 6px;
+    list-style: none;
+    background: white;
+    border: 2px solid #b7c4e0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    max-height: 230px;
+    overflow-y: auto;
+}
+
+.select__list[hidden] {
+    display: none;
+}
+
+.select__option {
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.select__option:hover,
+.select__option--active {
+    background: #e8edff;
+    color: #304bca;
+}
+
+.select__option[aria-selected="true"]::before {
+    content: "✓ ";
+    font-weight: bold;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 14px;
+    background: #e8f7ee;
+    border-radius: 8px;
+    color: #17663a;
+    font-weight: bold;
+}
+
+.help {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e1e5ee;
+}
+
+.help h2 {
+    font-size: 17px;
+}
+
+.help p {
+    color: #65708a;
+    font-size: 14px;
+}
