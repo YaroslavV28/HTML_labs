@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Каталог товаров</h1>
+
+        <article class="card"
+                 aria-labelledby="product-title"
+                 aria-describedby="product-desc">
+
+            <div class="card__image-box">
+                <img src="product.jpg"
+                     alt=""
+                     aria-hidden="true"
+                     class="card__image">
+
+                <span class="card__badge" aria-hidden="true">
+                    Хит
+                </span>
+            </div>
+
+            <div class="card__content">
+                <h2 id="product-title" class="card__title">
+                    Беспроводные наушники
+                </h2>
+
+                <p id="product-desc" class="card__description">
+                    Хороший звук, шумоподавление
+                    и до 30 часов работы без зарядки.
+                </p>
+
+                <p class="card__price"
+                   aria-label="Цена товара: 7990 рублей">
+                    7 990 ₽
+                </p>
+
+                <button class="card__button button button--primary"
+                        type="button"
+                        aria-label="Добавить беспроводные наушники в корзину">
+                    В корзину
+                </button>
+
+                <a href="#details" class="card__link">
+                    Подробнее
+                </a>
+            </div>
+        </article>
+
+        <section id="details">
+            <h2>Информация о товаре</h2>
+            <p>Беспроводное подключение, встроенный микрофон.</p>
+        </section>
+
+        <p id="message"
+           class="visually-hidden"
+           aria-live="polite"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
