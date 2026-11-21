@@ -1,0 +1,169 @@
+
+/* Общие настройки */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+/* Сетка страницы - Mobile First */
+.dashboard {
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+}
+
+.dashboard__header {
+    grid-area: header;
+}
+
+.dashboard__sidebar {
+    grid-area: sidebar;
+    display: none;
+}
+
+.dashboard__main {
+    grid-area: main;
+}
+
+.dashboard__footer {
+    grid-area: footer;
+}
+
+/* Шапка - Flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header__logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header__user {
+    color: #666;
+}
+
+/* Боковое меню */
+.sidebar {
+    background: #34495e;
+    padding: 20px;
+}
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar__link {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar__link--active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Основной контент */
+.main-content {
+    min-width: 0;
+    padding: 20px;
+}
+
+.main-content__title {
+    margin-top: 0;
+}
+
+/* Карточки задач - Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.task-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.task-card__title {
+    margin-top: 0;
+}
+
+.task-card__desc {
+    color: #555;
+}
+
+.task-card__btn {
+    margin-top: auto;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-card__btn:hover {
+    background: #247bb5;
+}
+
+.task-card__btn:focus-visible {
+    outline: 3px solid orange;
+}
+
+/* Подвал */
+.footer {
+    padding: 15px;
+    background: #ddd;
+    text-align: center;
+}
+
+/* Планшеты */
+@media (min-width: 768px) {
+    .dashboard {
+        grid-template-columns: 200px minmax(0, 1fr);
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+    }
+
+    .dashboard__sidebar {
+        display: block;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Компьютеры */
+@media (min-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
