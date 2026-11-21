@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления задачами</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard">
+
+    <header class="dashboard__header header">
+        <h1 class="header__logo">Мои задачи</h1>
+        <p class="header__user">Студент СКФУ</p>
+    </header>
+
+    <aside class="dashboard__sidebar sidebar">
+        <nav class="sidebar__nav">
+            <a href="#" class="sidebar__link sidebar__link--active">Главная</a>
+            <a href="#" class="sidebar__link">Задачи</a>
+            <a href="#" class="sidebar__link">Настройки</a>
+        </nav>
+    </aside>
+
+    <main class="dashboard__main main-content">
+        <h2 class="main-content__title">Список задач</h2>
+        <p>Мои задачи на ближайшие дни.</p>
+
+        <section class="cards-grid">
+            <article class="task-card">
+                <h3 class="task-card__title">Лабораторная №6</h3>
+                <p class="task-card__desc">
+                    Сделать задание по HTML и CSS.
+                </p>
+                <button class="task-card__btn" type="button">
+                    Выполнено
+                </button>
+            </article>
+
+            <article class="task-card">
+                <h3 class="task-card__title">Изучить C++</h3>
+                <p class="task-card__desc">
+                    Повторить массивы и циклы.
+                </p>
+                <button class="task-card__btn" type="button">
+                    Выполнено
+                </button>
+            </article>
+
+            <article class="task-card">
+                <h3 class="task-card__title">Подготовиться к зачёту</h3>
+                <p class="task-card__desc">
+                    Повторить пройденные темы.
+                </p>
+                <button class="task-card__btn" type="button">
+                    Выполнено
+                </button>
+            </article>
+        </section>
+    </main>
+
+    <footer class="dashboard__footer footer">
+        <p>© 2026. Панель задач.</p>
+    </footer>
+
+</body>
+</html>
